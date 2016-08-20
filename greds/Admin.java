@@ -89,12 +89,12 @@ public class Admin extends javax.swing.JFrame {
 
     private void AgregarVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarVendedorActionPerformed
         agreVendedor agreVendedor=new agreVendedor();
-        agreVendedor.setVisible(rootPaneCheckingEnabled);
+        agreVendedor.setVisible(true);
     }//GEN-LAST:event_AgregarVendedorActionPerformed
 
     private void eliminarVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarVendedorActionPerformed
         eliminarVend eliminarVend= new eliminarVend();
-        eliminarVend.setVisible(rootPaneCheckingEnabled);
+        eliminarVend.setVisible(true);
     }//GEN-LAST:event_eliminarVendedorActionPerformed
 
     public static void main(String args[]) {
