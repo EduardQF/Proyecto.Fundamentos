@@ -4,7 +4,7 @@ package proyectemp;
 
 public class ventaProductos extends javax.swing.JFrame {
 /*
- ahutor Carrion Cristo, Darigo Giaccomo, Queupumil Eduardo.    
+ ahutor Carrion Cristobal, Darigo Giaccomo, Queupumil Eduardo.    
 */
     public ventaProductos() {
         initComponents();
