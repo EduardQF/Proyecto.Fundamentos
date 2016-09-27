@@ -1,23 +1,16 @@
 
 package builshop;
 
-import java.awt.Image;
-import java.awt.Toolkit;
+
 
 public class Admin extends javax.swing.JFrame {
 /*
- ahutor Carrion Cristobal, Darigo Giaccomo, Queupumil Eduardo.    
+ ahutor Carrion Cristo, Darigo Giaccomo, Queupumil Eduardo.    
 */
     public Admin() {
         initComponents();
     }
 
-    @Override
-    public Image getIconImage() {
-        Image retValue = Toolkit.getDefaultToolkit().getImage("C:/BuildShop/IMG/Logo64x64.png");
-        return retValue;
-    }
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -63,12 +56,11 @@ public class Admin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(Stock, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Pedido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(registrosVenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(eliminarVendedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(AgregarVendedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Stock, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Pedido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(registrosVenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(eliminarVendedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(AgregarVendedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Pventa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(planilla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(263, Short.MAX_VALUE))
@@ -97,13 +89,13 @@ public class Admin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AgregarVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarVendedorActionPerformed
-        agreVendedor agreVendedor=new agreVendedor();
-        agreVendedor.setVisible(true);
+        AgreVendedor agreVendedor=new AgreVendedor();
+        agreVendedor.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_AgregarVendedorActionPerformed
 
     private void eliminarVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarVendedorActionPerformed
-        eliminarVend eliminarVend= new eliminarVend();
-        eliminarVend.setVisible(true);
+        EliminarVend eliminarVend= new EliminarVend();
+        eliminarVend.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_eliminarVendedorActionPerformed
 
     public static void main(String args[]) {

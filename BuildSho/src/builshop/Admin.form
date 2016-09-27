@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="Stock" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Pedido" alignment="0" max="32767" attributes="0"/>
+                  <Component id="registrosVenta" alignment="0" max="32767" attributes="0"/>
+                  <Component id="eliminarVendedor" alignment="0" max="32767" attributes="0"/>
+                  <Component id="AgregarVendedor" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Pventa" alignment="0" max="32767" attributes="0"/>
+                  <Component id="planilla" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace pref="263" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="AgregarVendedor" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="eliminarVendedor" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="registrosVenta" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="Stock" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="Pedido" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="Pventa" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="planilla" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="92" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="eliminarVendedor">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Eliminar vendedor"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eliminarVendedorActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="AgregarVendedor">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Agregar vendedor"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AgregarVendedorActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="registrosVenta">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Registros de Venta"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Stock">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Stock de productos"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Pedido">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Requerir Pedidos"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Pventa">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="productos en venta"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="planilla">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="planilla ventas"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
