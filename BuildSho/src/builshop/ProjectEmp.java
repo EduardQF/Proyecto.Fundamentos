@@ -1,13 +1,12 @@
-
+ 
 package builshop;
 
-public class ProyectEmp {
+public class ProjectEmp {
 /*
  ahutor Carrion Cristobal, Darigo Giaccomo, Queupumil Eduardo.    
 */
     public static void main(String[] args) {
-           // LogIn IntroUsers=new LogIn();
-            //IntroUsers.setVisible(true);
+           LogIn.main(null);
     }
     
 }
