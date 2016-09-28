@@ -5,11 +5,11 @@ import java.awt.Image;
 import java.awt.Toolkit;
 
 
-public class ventaProductos extends javax.swing.JFrame {
+public class VentaProductos extends javax.swing.JFrame {
 /*
  ahutor Carrion Cristobal, Darigo Giaccomo, Queupumil Eduardo.    
 */
-    public ventaProductos() {
+    public VentaProductos() {
         initComponents();
     }
     
