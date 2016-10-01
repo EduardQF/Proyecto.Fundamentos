@@ -1,9 +1,6 @@
 
 package builshop;
 
-import java.awt.Image;
-import java.awt.Toolkit;
-
 
 public class EliminarVend extends javax.swing.JFrame {
 /*
@@ -14,12 +11,6 @@ public class EliminarVend extends javax.swing.JFrame {
         initComponents();
     }
 
-    @Override
-    public Image getIconImage() {
-        Image retValue = Toolkit.getDefaultToolkit().getImage("C:/BuildShop/IMG/Logo64x64.png");
-        return retValue;
-    }
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

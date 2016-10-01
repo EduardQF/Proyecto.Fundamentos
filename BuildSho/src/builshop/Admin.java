@@ -1,6 +1,9 @@
 
 package builshop;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+
 
 
 public class Admin extends javax.swing.JFrame {
@@ -9,6 +12,12 @@ public class Admin extends javax.swing.JFrame {
 */
     public Admin() {
         initComponents();
+    }
+    
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage("C:/BuildShop/IMG/Logo64x64.png");
+        return retValue;
     }
 
     @SuppressWarnings("unchecked")
@@ -24,6 +33,7 @@ public class Admin extends javax.swing.JFrame {
         planilla = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImages(getIconImages());
 
         eliminarVendedor.setText("Eliminar vendedor");
         eliminarVendedor.addActionListener(new java.awt.event.ActionListener() {

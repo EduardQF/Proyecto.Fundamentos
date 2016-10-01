@@ -8,9 +8,11 @@ import javax.swing.JOptionPane;
  * @author Eduard QF
  */
 public class Utiles {
-    public static void main(String[] args) {
-        
+    public static boolean validarClave(String cadena){
+        boolean v=cadena.matches("[a-zA-Z0-9]+");
+        return v;
     }
+    
     public static boolean validadorString(String cadena){
         boolean v=cadena.matches("[a-zA-Z]+");
         return v;
@@ -51,6 +53,7 @@ public class Utiles {
         if (v == 11) v = 0;
         return v;
     }
+    
     
     public static boolean validadorCorreo(String cadena){
         boolean v=false;
