@@ -60,23 +60,4 @@ public class Utiles {
         return v;
     }
     
-    
-    public static void mostrarPP(int op){
-        switch (op) {
-            case 1:
-                JOptionPane.showMessageDialog(null, "ingrese solamente letras");
-                break;
-            case 2:
-                JOptionPane.showMessageDialog(null, "ingrese solamente numeros");
-                break;
-            case 3:
-                JOptionPane.showMessageDialog(null, "ingrese puntos y guion");
-                break;
-            case 4:
-                
-                break;
-            default:
-                throw new AssertionError();
-        }
-    }
 }
