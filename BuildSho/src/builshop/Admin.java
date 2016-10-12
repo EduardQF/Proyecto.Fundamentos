@@ -9,7 +9,8 @@ import java.awt.Toolkit;
 public class Admin extends javax.swing.JFrame {
 /*
  ahutor Carrion Cristo, Darigo Giaccomo, Queupumil Eduardo.    
-*/
+*///jajajajjaja
+    
     public Admin() {
         initComponents();
     }
