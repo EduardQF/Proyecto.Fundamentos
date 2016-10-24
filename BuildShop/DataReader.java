@@ -15,7 +15,7 @@ public class DefaultData {
 	public static void newData(NoSuchFileException error) throws IOException{
     	new File(defFolder+"/DB").mkdirs(); // if (Folder not found) {Create Folder}
     	String[][] data = new String[][]
-    			//Usuario,Contraseña,Tipo,Nombre,ApellidoP,ApellidoM,Email
+    			//Usuario,ContraseÃ±a,Tipo,Nombre,ApellidoP,ApellidoM,Email
     			{{"admin","admin","admin","Admin","null","null","null"}};
     	try {
     		wFile2D(defFolder+"/DB","/users.buildshop",data);
@@ -30,7 +30,7 @@ public class DefaultData {
     		for (int D = 0; D < data[d].length; D++){
     			pw.write(data[d][D]);
         		if (d < data.length-1 || D < data[d].length-1){
-            		pw.write("¦»»»¦"); // «««
+            		pw.write("Â¦Â»Â»Â»Â¦"); // Â«Â«Â«
         		}
     		}
     	}
