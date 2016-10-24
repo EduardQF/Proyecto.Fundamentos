@@ -10,6 +10,7 @@ public class AgreVendedor extends javax.swing.JFrame {
 /*
  ahutor Carrion Cristo, Darigo Giaccomo, Queupumil Eduardo.    
 */
+    
     public AgreVendedor() {
         initComponents();
     }
@@ -136,12 +137,12 @@ public class AgreVendedor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAgregarActionPerformed
-        String firstname,lastname,rut,clave;
+        String firstname="",lastname="",rut="",clave="";
         boolean no=false,ap=false,ed=false,ru=false,cl=false;
-        int edad;
+        int edad=0;
         if(Utiles.validadorString(JNombre.getText())){
             firstname=JNombre.getText();
-            no=true;
+
         }else{
             Jmesannge.setText("ingrese solamente letras");
         }
@@ -172,8 +173,9 @@ public class AgreVendedor extends javax.swing.JFrame {
         //objetos
         if(no && ap && ed && ru && cl){
             JOptionPane.showMessageDialog(null, "Agregado");
-            
+            AgregarVendedor.validarentradas(firstname,lastname,edad,rut,clave);
         }
+        
     }//GEN-LAST:event_jAgregarActionPerformed
 
     public static void main(String args[]) {
