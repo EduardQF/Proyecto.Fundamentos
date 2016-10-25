@@ -1,6 +1,8 @@
 package builshop;
 
-public class Producto {
+import javax.swing.JButton;
+
+public class Producto extends JButton{
 
     private int cantidad;
     private String nombre;

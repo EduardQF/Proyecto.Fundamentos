@@ -1,7 +1,6 @@
 
 package builshop;
 
-import builshop.AgregarVendedor;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane;
@@ -14,6 +13,7 @@ public class AgreVendedor extends javax.swing.JFrame {
     
     public AgreVendedor() {
         initComponents();
+       
     }
     
     @Override
@@ -43,7 +43,7 @@ public class AgreVendedor extends javax.swing.JFrame {
         Jmesannge3 = new javax.swing.JLabel();
         Jmesannge4 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setIconImage(getIconImage());
         setIconImages(getIconImages());
 
@@ -174,8 +174,8 @@ public class AgreVendedor extends javax.swing.JFrame {
         //objetos
         if(no && ap && ed && ru && cl){
             JOptionPane.showMessageDialog(null, "Agregado");
-            AgregarVendedor.validarentradas(firstname,lastname,edad,rut,clave);
         }
+        
         
     }//GEN-LAST:event_jAgregarActionPerformed
 

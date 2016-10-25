@@ -39,10 +39,10 @@ public class DataManager {
 	public static void readDB() {
 		System.out.println("Reading DB");
 		String temp_db[] = DataReader.readData("C:/BuildShop/DB/users.buildshop", "�����");
-		System.out.println("DataBase Size: "+temp_db.length+"\n"+(temp_db.length/7)+" Users Detected");
-		for (int i = 0; i < temp_db.length; i += 6){
+		System.out.println("DataBase Size: "+temp_db.length+"\n"+(temp_db.length/8)+" Users Detected");
+		for (int i = 0; i < temp_db.length; i += 7){
 			db_user.add(new User(temp_db[i], temp_db[i + 1], temp_db[i + 2], temp_db[i + 3], temp_db[i + 4],
-					temp_db[i + 5]));
+					temp_db[i + 5], temp_db[i + 6]));
 			System.out.println("Reading ID: "+temp_db[i]);}
 	}
 	

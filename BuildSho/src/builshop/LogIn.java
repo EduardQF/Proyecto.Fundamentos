@@ -29,8 +29,8 @@ public class LogIn extends JFrame {
 
 	public LogIn() {
 		setTitle("BuildShop");
-		//setIconImage(
-		//		Toolkit.getDefaultToolkit().getImage(LogIn.class.getResource("/buildshop/resources/Logo32x32.png")));
+		setIconImage(
+				Toolkit.getDefaultToolkit().getImage(("C:/BuildShop/IMG/Logo32x32.png")));
 		setUndecorated(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 345, 270);
@@ -101,7 +101,7 @@ public class LogIn extends JFrame {
 		contentPane.add(btnExit);
 
 		JLabel lblLogo = new JLabel("");
-		//lblLogo.setIcon(new ImageIcon(LogIn.class.getResource("/buildshop/resources/Logo40x40.png")));
+		lblLogo.setIcon(new ImageIcon(("C:/BuildShop/IMG/Logo40x40.png")));
 		lblLogo.setBounds(43, 23, 46, 45);
 		contentPane.add(lblLogo);
 		

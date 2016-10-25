@@ -4,7 +4,16 @@ public class Person {
 	protected String firstname;
 	protected String lastname;
 	protected String address;
+        protected int age;
 	protected String email;
+        
+        public void setAge(String s) {
+		firstname = s;
+	}
+
+	public String getAge() {
+		return firstname;
+	}
 	
 	public void setFirstName(String s) {
 		firstname = s;

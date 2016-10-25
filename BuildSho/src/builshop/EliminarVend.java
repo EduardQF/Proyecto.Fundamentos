@@ -23,7 +23,7 @@ public class EliminarVend extends javax.swing.JFrame {
         jMensaje1 = new javax.swing.JLabel();
         jMensaje2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("Rut Vendedor:");
 
