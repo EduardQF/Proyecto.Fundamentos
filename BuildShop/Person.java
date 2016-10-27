@@ -1,6 +1,6 @@
 package buildshop;
 
-public class Person {
+abstract class Person {
 	protected String firstname;
 	protected String lastname;
 	protected String address;

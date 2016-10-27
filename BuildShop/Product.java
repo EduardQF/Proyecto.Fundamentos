@@ -7,14 +7,16 @@ public class Product {
 	private int cost;
 	private int price;
 	private int stock;
+	private String unit;
 
-	public Product(String id, String code, String name, int cost, int price, int stock) {
+	public Product(String id, String code, String name, int cost, int price, int stock, String unit) {
 		this.id = id;
 		this.code = code;
 		this.name = name;
 		this.cost = cost;
 		this.price = price;
 		this.stock = stock;
+		this.unit = unit;
 	}
 	
 
@@ -65,6 +67,13 @@ public class Product {
 	public int getStock() {
 		return stock;
 	}
+	
+	public void setUnit(String s) {
+		unit = s;
+	}
 
+	public String getUnit() {
+		return unit;
+	}
 }
 

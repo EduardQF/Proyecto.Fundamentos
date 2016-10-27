@@ -18,7 +18,7 @@ public class LoadingScreen extends JFrame {
 	public LoadingScreen() {
 		setAlwaysOnTop(true);
 		setIconImage(Toolkit.getDefaultToolkit()
-				.getImage(LoadingScreen.class.getResource("/buildshop/resources/Logo32x32.png")));
+				.getImage("C:/BuildShop/IMG/Logo32x32.png"));
 		setUndecorated(true);
 		setTitle("BuildShop");
 		setResizable(false);
@@ -36,7 +36,7 @@ public class LoadingScreen extends JFrame {
 		contentPane.add(lblBuildShop);
 
 		JLabel lblLogo = new JLabel("");
-		lblLogo.setIcon(new ImageIcon(LoadingScreen.class.getResource("/buildshop/resources/Logo40x40.png")));
+		lblLogo.setIcon(new ImageIcon("C:/BuildShop/IMG/Logo40x40.png"));
 		lblLogo.setBounds(10, 11, 46, 45);
 		contentPane.add(lblLogo);
 
