@@ -1,20 +1,20 @@
 package builshop;
 
 public class Product {
-	private String id;
+private String id;
 	private String code;
 	private String name;
 	private int cost;
 	private int price;
 	private int stock;
 
-	public Product(String id, String code, String name, int cost, int price, int stock) {
+	public Product(String id, String code, String name, String cost, String price, String stock) {
 		this.id = id;
 		this.code = code;
 		this.name = name;
-		this.cost = cost;
-		this.price = price;
-		this.stock = stock;
+		this.cost = Integer.valueOf(cost);
+		this.price = Integer.valueOf(price);
+		this.stock = Integer.valueOf(stock);
 	}
 	
 

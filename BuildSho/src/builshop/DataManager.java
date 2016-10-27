@@ -33,7 +33,8 @@ public class DataManager {
 	}
 	
 	public static boolean getAccess(int i){
-		return user_access[i];
+            user_access[0]=false;
+            return user_access[i];
 	}
 
 	public static void readDB() {
@@ -68,5 +69,15 @@ public class DataManager {
 		}
 		return false;
 	}
+        
+        public static void readDBProduct(){
+            System.out.println("Reading...");
+		String temp_db[] = DataReader.readData("C:/BuildShop/DB/product.buildshop", "¦»»»¦");
+		System.out.println("DataBase Size: "+temp_db.length+"\n"+(temp_db.length/8)+" products Detected");
+		for (int i = 0; i < temp_db.length; i += 7){
+			db_product.add(new Product(temp_db[i], temp_db[i + 1], temp_db[i + 2], temp_db[i + 3], temp_db[i + 4],
+					temp_db[i + 5]));
+			System.out.println("Reading ID: "+temp_db[i]);}
+        }
 
 }

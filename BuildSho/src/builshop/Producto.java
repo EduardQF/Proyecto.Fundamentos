@@ -2,81 +2,70 @@ package builshop;
 
 import javax.swing.JButton;
 
-public class Producto extends JButton{
+public class Producto extends JButton {
 
-    private int cantidad;
-    private String nombre;
-    private String marca;
-    private String codigo;
-    private String tipo;
-    private String fVencimiento;
-    private String fElavoracion;
+    private String id;
+    private String code;
+    private String name;
+    private int cost;
+    private int price;
+    private int stock;
 
-    public int getCantidad() {
-        return cantidad;
+    public Producto(String id, String code, String name, String cost, String price, String stock) {
+        this.id = id;
+        this.code = code;
+        this.name = name;
+        this.cost = Integer.valueOf(cost);
+        this.price = Integer.valueOf(price);
+        this.stock = Integer.valueOf(stock);
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public void setID(String s) {
+        id = s;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getID() {
+        return id;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setCode(String s) {
+        code = s;
     }
 
-    public String getMarca() {
-        return marca;
+    public String getCode() {
+        return code;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setName(String s) {
+        name = s;
     }
 
-    public String getCodigo() {
-        return codigo;
+    public String getName() {
+        return name;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setCost(int s) {
+        cost = s;
     }
 
-    public String getTipo() {
-        return tipo;
+    public int getCost() {
+        return cost;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setPrice(int s) {
+        price = s;
     }
 
-    public String getfVencimiento() {
-        return fVencimiento;
+    public int getPrice() {
+        return price;
     }
 
-    public void setfVencimiento(String fVencimiento) {
-        this.fVencimiento = fVencimiento;
+    public void setStock(int s) {
+        stock = s;
     }
 
-    public String getfElavoracion() {
-        return fElavoracion;
-    }
-
-    public void setfElavoracion(String fElavoracion) {
-        this.fElavoracion = fElavoracion;
-    }
-
-    public Producto(int cantidad, String nombre, String marca, String codigo, String tipo, String fVencimiento, String fElavoracion) {
-        this.cantidad = cantidad;
-        this.nombre = nombre;
-        this.marca = marca;
-        this.codigo = codigo;
-        this.tipo = tipo;
-        this.fVencimiento = fVencimiento;
-        this.fElavoracion = fElavoracion;
-
+    public int getStock() {
+        return stock;
     }
 
 }
