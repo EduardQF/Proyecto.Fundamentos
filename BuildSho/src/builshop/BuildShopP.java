@@ -34,6 +34,7 @@ public class BuildShopP extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         registroMensual = new javax.swing.JMenuItem();
         fullVentas = new javax.swing.JMenuItem();
+        planillaVentas = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         detallesP = new javax.swing.JMenuItem();
         stock = new javax.swing.JMenuItem();
@@ -151,6 +152,9 @@ public class BuildShopP extends javax.swing.JFrame {
             }
         });
         jMenu1.add(fullVentas);
+
+        planillaVentas.setText("Planillas de venta");
+        jMenu1.add(planillaVentas);
 
         jMenuBar1.add(jMenu1);
 
@@ -283,6 +287,7 @@ public class BuildShopP extends javax.swing.JFrame {
 
     private void addWorkerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addWorkerActionPerformed
         AdminBSP.addWorker();
+        
     }//GEN-LAST:event_addWorkerActionPerformed
 
     private void registerUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerUsersActionPerformed
@@ -388,6 +393,7 @@ public class BuildShopP extends javax.swing.JFrame {
     private javax.swing.JPanel jProductos;
     private javax.swing.JPanel jVenta;
     private javax.swing.JMenuItem modificarWorker;
+    private javax.swing.JMenuItem planillaVentas;
     private javax.swing.JMenuItem registerUsers;
     private javax.swing.JMenuItem registroMensual;
     private javax.swing.JMenuItem stock;

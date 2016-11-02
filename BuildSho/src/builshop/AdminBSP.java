@@ -25,7 +25,7 @@ public abstract class AdminBSP {
 
     public static void usersActived() {
         if (DataManager.getAccess(0)) {
-
+               
         } else {
             JOptionPane.showMessageDialog(null, "no tiene acceso permitido", "PERMISO INVALIDO", JOptionPane.WARNING_MESSAGE);
         }
