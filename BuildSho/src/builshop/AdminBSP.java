@@ -10,100 +10,117 @@ public abstract class AdminBSP {
             AgreVendedor vend = new AgreVendedor();
             vend.setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(null, "no tiene acceso permitido", "PERMISO INVALIDO", JOptionPane.WARNING_MESSAGE);
+            mesangeError();            
         }
-    }
-
+    }//listo
+    
     public static void removeWorker() {
         if (DataManager.getAccess(0)) {
             EliminarVend elim = new EliminarVend();
             elim.setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(null, "no tiene acceso permitido", "PERMISO INVALIDO", JOptionPane.WARNING_MESSAGE);
+            mesangeError();            
         }
-    }
-
+    }//listo
+    
     public static void usersActived() {
         if (DataManager.getAccess(0)) {
-               
+            UsersActived us = new UsersActived();
+            us.setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(null, "no tiene acceso permitido", "PERMISO INVALIDO", JOptionPane.WARNING_MESSAGE);
+            mesangeError();            
         }
-    }
-
+    }//listo
+    
     public static void registerUsers() {
         if (DataManager.getAccess(0)) {
-
+            UsersRegister ur = new UsersRegister();
+            ur.setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(null, "no tiene acceso permitido", "PERMISO INVALIDO", JOptionPane.WARNING_MESSAGE);
+            mesangeError();            
         }
-    }
+    }//listo
 
     //ventas
     public static void registroVentasM() {
         if (DataManager.getAccess(0)) {
-
+            
         } else {
-            JOptionPane.showMessageDialog(null, "no tiene acceso permitido", "PERMISO INVALIDO", JOptionPane.WARNING_MESSAGE);
+            mesangeError();            
         }
     }
-
+    
     public static void registroVentasA() {
         if (DataManager.getAccess(1)) {
-
+            
         } else {
-            JOptionPane.showMessageDialog(null, "no tiene acceso permitido", "PERMISO INVALIDO", JOptionPane.WARNING_MESSAGE);
+            mesangeError();            
         }
     }
 
     //productos
     public static void registroProduct() {
         if (DataManager.getAccess(1)) {
-
+            
         } else {
-            JOptionPane.showMessageDialog(null, "no tiene acceso permitido", "PERMISO INVALIDO", JOptionPane.WARNING_MESSAGE);
+            mesangeError();            
         }
     }
-
+    
     public static void stock() {
         if (DataManager.getAccess(1)) {
-
+            
         } else {
-            JOptionPane.showMessageDialog(null, "no tiene acceso permitido", "PERMISO INVALIDO", JOptionPane.WARNING_MESSAGE);
+            mesangeError();            
         }
     }
-
+    
     public static void addProduct() {
         if (DataManager.getAccess(0)) {
-
+            newProduct np=new newProduct();
+            np.setVisible(true);
         } else {
-            JOptionPane.showMessageDialog(null, "no tiene acceso permitido", "PERMISO INVALIDO", JOptionPane.WARNING_MESSAGE);
+            mesangeError();            
         }
-
-    }
-
+        
+    }//listo
+    
     public static void removeProduct() {
         if (DataManager.getAccess(0)) {
-
+            
         } else {
-            JOptionPane.showMessageDialog(null, "no tiene acceso permitido", "PERMISO INVALIDO", JOptionPane.WARNING_MESSAGE);
+            mesangeError();            
         }
     }
-
+    
     public static void requeredProduct() {
         if (DataManager.getAccess(1)) {
-
+            
         } else {
-            JOptionPane.showMessageDialog(null, "no tiene acceso permitido", "PERMISO INVALIDO", JOptionPane.WARNING_MESSAGE);
+            mesangeError();            
         }
     }
 
     //Estadisticas
-    public static void generateGraficM(){
-    
+    public static void generateGraficM() {
+        if (DataManager.getAccess(0)) {
+            
+        } else {
+            mesangeError();            
+        }
     }
     
-    public static void generateGraficA(){
-    
+    public static void generateGraficA() {
+        if (DataManager.getAccess(0)) {
+            
+        } else {
+            mesangeError();            
+        }
+    }
+
+    //other
+    private static void mesangeError() {
+        MesangeError me = new MesangeError();
+        me.setVisible(true);
     }
 }

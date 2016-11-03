@@ -1,7 +1,6 @@
-package builshop;
+package  builshop;
 
 public class Launcher {
-    
 	public static void main(String[] args) throws InterruptedException {
 		start();
 	}
@@ -10,7 +9,9 @@ public class Launcher {
 		DataManager.showLS();
 		System.out.println("LS Loaded");
 		Thread.sleep(500);
-		DataManager.readDB();
+		DataManager.readUsers();
+		DataManager.readProducts();
+		DataManager.readClients();
 		System.out.println("DB Loaded");
 		LogIn li = new LogIn();
 		li.setVisible(true);

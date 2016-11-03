@@ -1,20 +1,22 @@
-package builshop;
+package  builshop;
 
 public class Product {
-private String id;
+	private String id;
 	private String code;
 	private String name;
 	private int cost;
 	private int price;
 	private int stock;
+	private String unit;
 
-	public Product(String id, String code, String name, String cost, String price, String stock) {
+	public Product(String id, String code, String name, int cost, int price, int stock, String unit) {
 		this.id = id;
 		this.code = code;
 		this.name = name;
-		this.cost = Integer.valueOf(cost);
-		this.price = Integer.valueOf(price);
-		this.stock = Integer.valueOf(stock);
+		this.cost = cost;
+		this.price = price;
+		this.stock = stock;
+		this.unit = unit;
 	}
 	
 
@@ -65,6 +67,13 @@ private String id;
 	public int getStock() {
 		return stock;
 	}
+	
+	public void setUnit(String s) {
+		unit = s;
+	}
 
+	public String getUnit() {
+		return unit;
+	}
 }
 

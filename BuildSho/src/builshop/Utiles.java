@@ -65,7 +65,7 @@ public class Utiles {
     }
 
     public static boolean validadorCorreo(String cadena) {
-        boolean v = false;
+        boolean v = true;
         return v;
     }
 

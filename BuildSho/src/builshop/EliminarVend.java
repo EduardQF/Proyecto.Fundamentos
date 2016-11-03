@@ -116,14 +116,6 @@ public class EliminarVend extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JclaveActionPerformed
 
-    public static void main(String args[]) {
-
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new EliminarVend().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JEliminar;

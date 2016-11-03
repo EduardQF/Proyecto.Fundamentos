@@ -1,13 +1,12 @@
-package builshop;
+package  builshop;
 
 public class User extends Person{
 	private String id;
 	private String password;
 	private String access;
 
-	public User(String id, String password, String access, String firstname, String lastname,String age, String email) {
-		this.age=Integer.valueOf(age);
-                this.id = id;
+	public User(String id, String password, String access, String firstname, String lastname, String email) {
+		this.id = id;
 		this.password = password;
 		this.access = access;
 		this.firstname = firstname;
