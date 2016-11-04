@@ -34,6 +34,8 @@ public class DataManager {
 
 	public static boolean getAccess(int i) {
                 user_access[0]=true;
+                user_access[1]=true;
+                user_access[2]=true;
 		return user_access[i];
 	}
 
