@@ -10,7 +10,7 @@ import java.awt.Toolkit;
 
 /**
  *
- * @author Eduard QF
+ * @author Cristobal y Eduard QF :D
  */
 public class newProduct extends javax.swing.JFrame {
 
@@ -27,6 +27,66 @@ public class newProduct extends javax.swing.JFrame {
         return retValue;
     }
 
+    public void ValidarEntradas (){
+        String producto = "", id = "", cantidad = "", codigo = "", precioVenta = "", costo = "", unit = "", descripcion = "";
+        boolean fa=false, pro=fa, id2=fa, cant=fa, cod=fa, pre=fa, cos=fa, uni=fa, des=fa;
+         if(Utiles.validadorString(nameProduct.getText())){
+            producto=nameProduct.getText();
+            pro=true;
+        }else{
+            errorName.setText("ingrese solamente letras");
+        }
+         
+         if(Utiles.validadorString(idProduct.getText())){
+            id=idProduct.getText();
+            id2=true;
+        }else{
+            errorId.setText("ingrese solamente letras");
+        } 
+         
+          if(Utiles.validadorIntPos(cantProduct.getText())){
+            cantidad=cantProduct.getText();
+            cant =true;
+        }else{
+            errorCant.setText("ingrese solamente numeros");
+        }
+          
+           if(Utiles.validadorIntPos(codigoProduct.getText())){
+            codigo=codigoProduct.getText();
+            cod=true;
+        }else{
+            errorCod.setText("ingrese solamente numeros");
+        }
+        
+           if(Utiles.validadorIntPos(precioProduct.getText())){
+            precioVenta=precioProduct.getText();
+            pre=true;
+        }else{
+            errorPrecio.setText("ingrese solamente numeros");
+        }
+          
+            if(Utiles.validadorIntPos(costProduct.getText())){
+            costo=costProduct.getText();
+            cos=true;
+        }else{
+            errorCost.setText("ingrese solamente numeros");
+        }
+            
+             if(Utiles.validadorIntPos(cantProduct1.getText())){
+            unit=cantProduct1.getText();
+            uni=true;
+        }else{
+            errorUnit.setText("ingrese solamente numeros");
+        }
+             
+              if(Utiles.validadorString(jTextArea1.getText())){
+            descripcion=jTextArea1.getText();
+            des=true;
+        }
+              
+           
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -70,6 +130,11 @@ public class newProduct extends javax.swing.JFrame {
         setIconImages(getIconImages());
 
         agregarProduct.setText("agregar");
+        agregarProduct.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregarProductActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Producto:");
 
@@ -212,9 +277,14 @@ public class newProduct extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void agregarProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarProductActionPerformed
+        ValidarEntradas ();
+    }//GEN-LAST:event_agregarProductActionPerformed
+
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

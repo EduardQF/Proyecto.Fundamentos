@@ -1,6 +1,5 @@
 package builshop;
 
-
 import javax.swing.JOptionPane;
 
 /**
@@ -63,7 +62,10 @@ public class Utiles {
         }
         return v;
     }
-
+    private static boolean validarFormatoCorreo(String r){
+         return r.matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+            + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+    }
     public static boolean validadorCorreo(String cadena) {
         boolean v = true;
         return v;
@@ -84,44 +86,45 @@ public class Utiles {
 
         return validador;
     }
-    
-     public static boolean validarFloatPositivos(String cadena) {
+
+    public static boolean validarFloatPositivos(String cadena) {
         boolean validador;
         double num = 0;
-        
-            validador = true;
-            
-            if (cadena.matches("[0-9]+")) {
-                num = Double.valueOf(cadena);
-                if (num >= 0) {
-                    validador = true;
-                }
-            } else if (cadena.matches("[0-9]+\\.[0-9]+")) {
-                num = Double.valueOf(cadena);
-                if (num >= 0) {
-                    validador = true;
-                }
+
+        validador = true;
+
+        if (cadena.matches("[0-9]+")) {
+            num = Double.valueOf(cadena);
+            if (num >= 0) {
+                validador = true;
             }
+        } else if (cadena.matches("[0-9]+\\.[0-9]+")) {
+            num = Double.valueOf(cadena);
+            if (num >= 0) {
+                validador = true;
+            }
+        }
         return validador;
     }
-    
-     public static boolean validarFloatNegativos(String cadena) {
+
+    public static boolean validarFloatNegativos(String cadena) {
         boolean validador;
         double num = 0;
-        
-            validador = true;
-            
-            if (cadena.matches("\\-[0-9]+")) {
-                num = Double.valueOf(cadena);
-                if (num >= 0) {
-                    validador = true;
-                }
-            } else if (cadena.matches("\\-[0-9]+\\.[0-9]+")) {
-                num = Double.valueOf(cadena);
-                if (num >= 0) {
-                    validador = true;
-                }
+
+        validador = true;
+
+        if (cadena.matches("\\-[0-9]+")) {
+            num = Double.valueOf(cadena);
+            if (num >= 0) {
+                validador = true;
             }
+        } else if (cadena.matches("\\-[0-9]+\\.[0-9]+")) {
+            num = Double.valueOf(cadena);
+            if (num >= 0) {
+                validador = true;
+            }
+        }
         return validador;
     }
+
 }
