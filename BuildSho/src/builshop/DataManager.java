@@ -1,4 +1,4 @@
-package  builshop;
+package builshop;
 
 import java.util.ArrayList;
 
@@ -18,79 +18,73 @@ public class DataManager {
 		ls.setVisible(false);
 	}
 
-	public static void setID(int id) {
-		user_id = id;
-	}
-
-	public static int getID() {
-		return user_id;
-	}
-
-	public static void setAcces(boolean admin, boolean inventory, boolean seller) {
-		user_access[0] = admin;
-		user_access[1] = inventory;
-		user_access[2] = seller;
-	}
-
-	public static boolean getAccess(int i) {
-                user_access[0]=true;
-                user_access[1]=true;
-                user_access[2]=true;
-		return user_access[i];
-	}
-
 	public static void newProduct(String id, String code, String name, int cost, int price, int stock, String unit) {
 		db_product.add(new Product(id, code, name, cost, price, stock, unit));
+	}
+	
+	public static void newUser(String id, String password, String access, String firstname, String lastname, String email) {
+		db_user.add(new User(id, password, access, firstname, lastname, email));
+	}
+	
+	public static void newClient() {
+		db_client.add(new Client());
 	}
 
 	public static void readUsers() {
 		System.out.println("Reading DB");
 		String temp_db[] = DataReader.readData("C:/BuildShop/DB/users.buildshop");
-		System.out.println("DataBase Size: " + temp_db.length + "\n" + (temp_db.length / 7) + " Users Detected");
-		for (int i = 0; i < temp_db.length; i += 6) {
-			db_user.add(new User(temp_db[i], temp_db[i + 1], temp_db[i + 2], temp_db[i + 3], temp_db[i + 4],
-					temp_db[i + 5]));
-			System.out.println("Reading ID: " + temp_db[i]);
+		if (temp_db.length > 5) {
+			System.out.println("UsersDB Size: " + temp_db.length + "\n" + (temp_db.length / 7) + " Users Detected");
+			for (int i = 0; i < temp_db.length; i += 6) {
+				db_user.add(new User(temp_db[i], temp_db[i + 1], temp_db[i + 2], temp_db[i + 3], temp_db[i + 4],
+						temp_db[i + 5]));
+				System.out.println("Reading ID: " + temp_db[i]);
+			}
 		}
 	}
 
 	public static void readProducts() {
 		System.out.println("Reading Products");
 		String temp_db[] = DataReader.readData("C:/BuildShop/DB/products.buildshop");
-		System.out.println("DataBase Size: " + temp_db.length + "\n" + (temp_db.length / 8) + " Products Detected");
-		for (int i = 0; i < temp_db.length; i += 7) {
-			db_product.add(new Product(temp_db[i], temp_db[i + 1], temp_db[i + 2], Integer.valueOf(temp_db[i + 3]),
-					Integer.valueOf(temp_db[i + 4]), Integer.valueOf(temp_db[i + 5]), temp_db[i + 6]));
-			System.out.println("Reading ID: " + temp_db[i]);
+		if (temp_db.length > 6) {
+			System.out
+					.println("ProductsDB Size: " + temp_db.length + "\n" + (temp_db.length / 8) + " Products Detected");
+			for (int i = 0; i < temp_db.length; i += 7) {
+				db_product.add(new Product(temp_db[i], temp_db[i + 1], temp_db[i + 2], Integer.valueOf(temp_db[i + 3]),
+						Integer.valueOf(temp_db[i + 4]), Integer.valueOf(temp_db[i + 5]), temp_db[i + 6]));
+				System.out.println("Reading ID: " + temp_db[i]);
+			}
 		}
 	}
 
 	public static void readClients() {
 		System.out.println("Reading Clients");
 		String temp_db[] = DataReader.readData("C:/BuildShop/DB/clients.buildshop");
-		System.out.println("DataBase Size: " + temp_db.length + "\n" + (temp_db.length / 1) + " Clients Detected");
-		for (int i = 0; i < temp_db.length; i += 1) {
-			db_client.add(new Client());
-			System.out.println("Reading ID: " + "null");
+		if (temp_db.length > 5) {
+			System.out.println("ClientsDB Size: " + temp_db.length + "\n" + (temp_db.length / 1) + " Clients Detected");
+			for (int i = 0; i < temp_db.length; i += 1) {
+				db_client.add(new Client());
+				System.out.println("Reading ID: " + "null");
+			}
 		}
 	}
-	
+
 	public static void writeUsers() {
 		String data = "";
 		for (int i = 0; i < db_user.size(); i++) {
 			if (i != 0) {
-				data += "�����";
+				data += "-----";
 			}
 			data += db_user.get(i).getID();
-			data += "�����";
+			data += "-----";
 			data += db_user.get(i).getPassword();
-			data += "�����";
+			data += "-----";
 			data += db_user.get(i).getAccess();
-			data += "�����";
+			data += "-----";
 			data += db_user.get(i).getFirstName();
-			data += "�����";
+			data += "-----";
 			data += db_user.get(i).getLastName();
-			data += "�����";
+			data += "-----";
 			data += db_user.get(i).getEmail();
 		}
 		DataReader.writeData("C:/BuildShop/DB/users.buildshop", data);
@@ -100,20 +94,20 @@ public class DataManager {
 		String data = "";
 		for (int i = 0; i < db_product.size(); i++) {
 			if (i != 0) {
-				data += "�����";
+				data += "-----";
 			}
 			data += db_product.get(i).getID();
-			data += "�����";
+			data += "-----";
 			data += db_product.get(i).getCode();
-			data += "�����";
+			data += "-----";
 			data += db_product.get(i).getName();
-			data += "�����";
+			data += "-----";
 			data += String.valueOf(db_product.get(i).getCost());
-			data += "�����";
+			data += "-----";
 			data += String.valueOf(db_product.get(i).getPrice());
-			data += "�����";
+			data += "-----";
 			data += String.valueOf(db_product.get(i).getStock());
-			data += "�����";
+			data += "-----";
 			data += db_product.get(i).getUnit();
 		}
 		DataReader.writeData("C:/BuildShop/DB/products.buildshop", data);
@@ -123,7 +117,7 @@ public class DataManager {
 		String data = "";
 		for (int i = 0; i < db_client.size(); i++) {
 			if (i != 0) {
-				data += "�����";
+				data += "¦»»»¦";
 			}
 		}
 		DataReader.writeData("C:/BuildShop/DB/clients.buildshop", data);
@@ -156,4 +150,45 @@ public class DataManager {
 		return false;
 	}
 
+	public static void setID(int id) {
+		user_id = id;
+	}
+
+	public static int getID() {
+		return user_id;
+	}
+
+	public static void setAcces(boolean admin, boolean inventory, boolean seller) {
+		user_access[0] = admin;
+		user_access[1] = inventory;
+		user_access[2] = seller;
+	}
+
+	public static boolean getAccess(int i) {
+		return user_access[i];
+	}
+	
+	public static int getUsersSize(){
+		return db_user.size();
+	}
+	
+	public static int getProductsSize(){
+		return db_product.size();
+	}
+	
+	public static int getClientsSize(){
+		return db_client.size();
+	}
+	
+	public static Product getProduct(int i){
+		return db_product.get(i);
+	}
+	
+	public static User getUser(int i){
+		return db_user.get(i);
+	}
+	
+	public static Client getClient(int i){
+		return db_client.get(i);
+	}
 }
