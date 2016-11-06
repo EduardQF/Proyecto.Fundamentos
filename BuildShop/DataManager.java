@@ -21,7 +21,7 @@ public class DataManager {
 	public static void newProduct(String id, String code, String name, int cost, int price, int stock, String unit) {
 		db_product.add(new Product(id, code, name, cost, price, stock, unit));
 	}
-
+	
 	public static void newUser(String id, String password, String access, String firstname, String lastname, String email) {
 		db_user.add(new User(id, password, access, firstname, lastname, email));
 	}
@@ -29,7 +29,7 @@ public class DataManager {
 	public static void newClient() {
 		db_client.add(new Client());
 	}
-	
+
 	public static void readUsers() {
 		System.out.println("Reading DB");
 		String temp_db[] = DataReader.readData("C:/BuildShop/DB/users.buildshop");
@@ -73,18 +73,18 @@ public class DataManager {
 		String data = "";
 		for (int i = 0; i < db_user.size(); i++) {
 			if (i != 0) {
-				data += "¦»»»¦";
+				data += "-----";
 			}
 			data += db_user.get(i).getID();
-			data += "¦»»»¦";
+			data += "-----";
 			data += db_user.get(i).getPassword();
-			data += "¦»»»¦";
+			data += "-----";
 			data += db_user.get(i).getAccess();
-			data += "¦»»»¦";
+			data += "-----";
 			data += db_user.get(i).getFirstName();
-			data += "¦»»»¦";
+			data += "-----";
 			data += db_user.get(i).getLastName();
-			data += "¦»»»¦";
+			data += "-----";
 			data += db_user.get(i).getEmail();
 		}
 		DataReader.writeData("C:/BuildShop/DB/users.buildshop", data);
@@ -94,20 +94,20 @@ public class DataManager {
 		String data = "";
 		for (int i = 0; i < db_product.size(); i++) {
 			if (i != 0) {
-				data += "¦»»»¦";
+				data += "-----";
 			}
 			data += db_product.get(i).getID();
-			data += "¦»»»¦";
+			data += "-----";
 			data += db_product.get(i).getCode();
-			data += "¦»»»¦";
+			data += "-----";
 			data += db_product.get(i).getName();
-			data += "¦»»»¦";
+			data += "-----";
 			data += String.valueOf(db_product.get(i).getCost());
-			data += "¦»»»¦";
+			data += "-----";
 			data += String.valueOf(db_product.get(i).getPrice());
-			data += "¦»»»¦";
+			data += "-----";
 			data += String.valueOf(db_product.get(i).getStock());
-			data += "¦»»»¦";
+			data += "-----";
 			data += db_product.get(i).getUnit();
 		}
 		DataReader.writeData("C:/BuildShop/DB/products.buildshop", data);
