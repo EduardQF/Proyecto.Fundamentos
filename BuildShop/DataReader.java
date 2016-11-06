@@ -14,7 +14,7 @@ public class DataReader {
 		} catch (IOException e) {
 			System.out.println("File not found");
 		}
-		return data.split("¦»»»¦");
+		return data.split("-----");
 	}
 
 	public static void writeData(String file, String data) {
