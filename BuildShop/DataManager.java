@@ -160,27 +160,27 @@ public class DataManager {
 		return user_access[i];
 	}
 	
-	public int getUsersSize(){
+	public static int getUsersSize(){
 		return db_user.size();
 	}
 	
-	public int getProductsSize(){
+	public static int getProductsSize(){
 		return db_product.size();
 	}
 	
-	public int getClientsSize(){
+	public static int getClientsSize(){
 		return db_client.size();
 	}
 	
-	public Product getProduct(int i){
+	public static Product getProduct(int i){
 		return db_product.get(i);
 	}
 	
-	public User getUser(int i){
+	public static User getUser(int i){
 		return db_user.get(i);
 	}
 	
-	public Client getClient(int i){
+	public static Client getClient(int i){
 		return db_client.get(i);
 	}
 }
