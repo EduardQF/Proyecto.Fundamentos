@@ -1,4 +1,3 @@
-
 package builshop;
 
 import java.awt.Image;
@@ -23,7 +22,7 @@ public class AgreVendedor extends javax.swing.JFrame {
     }
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -48,6 +47,7 @@ public class AgreVendedor extends javax.swing.JFrame {
         jAcces = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Agregar Vendedor");
         setIconImage(getIconImage());
         setIconImages(getIconImages());
 
@@ -167,9 +167,10 @@ public class AgreVendedor extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void jAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAgregarActionPerformed
+    private void jAgregarActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        limpiar();
         String firstname="",lastname="",rut="",clave="",email="",acces;
         boolean fa=false,no=fa,ap=fa,ed=fa,ru=fa,cl=fa,em=fa;
         int edad=0;
@@ -210,18 +211,18 @@ public class AgreVendedor extends javax.swing.JFrame {
             Jmesannge4.setText("correo ingresado invalido");
         }
         acces=jAcces.getSelectedItem().toString();
-        
-        //objetos
+        System.out.println("no:"+no+"\nap:"+ap+"\ned:"+ed+"\nru:"+ru+"\nem:"+em+"cl:"+cl);
         if(no && ap && ed && ru && cl&&em){
             AgreDelete.newUser(firstname,lastname,rut,clave,email,acces);
             JOptionPane.showMessageDialog(null, "Agregado");
+            dispose();
         }
         
         
-    }//GEN-LAST:event_jAgregarActionPerformed
+    }                                        
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JTextField JApellido;
     private javax.swing.JTextField JClave;
     private javax.swing.JTextField JEdad;
@@ -242,5 +243,14 @@ public class AgreVendedor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField jemail;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
+
+    private void limpiar() {
+        Jmesannge.setText("");
+        Jmesannge1.setText("");
+        Jmesannge2.setText("");
+        Jmesannge3.setText("");
+        Jmesannge4.setText("");
+              
+    }
 }
