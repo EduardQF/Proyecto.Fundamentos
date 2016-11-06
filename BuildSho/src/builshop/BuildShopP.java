@@ -12,6 +12,7 @@ public class BuildShopP extends javax.swing.JFrame {
 
     public BuildShopP() {
         initComponents();
+        DataManager.hideLS();
     }
 
     @Override
@@ -21,7 +22,7 @@ public class BuildShopP extends javax.swing.JFrame {
     }
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
@@ -58,7 +59,6 @@ public class BuildShopP extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BuildShop");
-        setAlwaysOnTop(true);
         setFocusTraversalPolicyProvider(true);
         setIconImage(getIconImage());
         setIconImages(getIconImages());
@@ -280,60 +280,60 @@ public class BuildShopP extends javax.swing.JFrame {
         setJMenuBar(jMenuBar1);
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void deleteWorkerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteWorkerActionPerformed
+    private void deleteWorkerActionPerformed(java.awt.event.ActionEvent evt) {                                             
         AdminBSP.removeWorker();
-    }//GEN-LAST:event_deleteWorkerActionPerformed
+    }                                            
 
-    private void addWorkerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addWorkerActionPerformed
+    private void addWorkerActionPerformed(java.awt.event.ActionEvent evt) {                                          
         AdminBSP.addWorker();
         
-    }//GEN-LAST:event_addWorkerActionPerformed
+    }                                         
 
-    private void registerUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerUsersActionPerformed
+    private void registerUsersActionPerformed(java.awt.event.ActionEvent evt) {                                              
         AdminBSP.registerUsers();
-    }//GEN-LAST:event_registerUsersActionPerformed
+    }                                             
 
-    private void stockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stockActionPerformed
+    private void stockActionPerformed(java.awt.event.ActionEvent evt) {                                      
         AdminBSP.stock();
-    }//GEN-LAST:event_stockActionPerformed
+    }                                     
 
-    private void detallesPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detallesPActionPerformed
+    private void detallesPActionPerformed(java.awt.event.ActionEvent evt) {                                          
         AdminBSP.registroProduct();
-    }//GEN-LAST:event_detallesPActionPerformed
+    }                                         
 
-    private void usersActivedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usersActivedActionPerformed
+    private void usersActivedActionPerformed(java.awt.event.ActionEvent evt) {                                             
         AdminBSP.usersActived();
-    }//GEN-LAST:event_usersActivedActionPerformed
+    }                                            
 
-    private void registroMensualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registroMensualActionPerformed
+    private void registroMensualActionPerformed(java.awt.event.ActionEvent evt) {                                                
         AdminBSP.registroVentasM();
-    }//GEN-LAST:event_registroMensualActionPerformed
+    }                                               
 
-    private void fullVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fullVentasActionPerformed
+    private void fullVentasActionPerformed(java.awt.event.ActionEvent evt) {                                           
         AdminBSP.registroVentasA();
-    }//GEN-LAST:event_fullVentasActionPerformed
+    }                                          
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {                                           
         AdminBSP.requeredProduct();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }                                          
 
-    private void AgregarProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarProductosActionPerformed
+    private void AgregarProductosActionPerformed(java.awt.event.ActionEvent evt) {                                                 
         AdminBSP.addProduct();
-    }//GEN-LAST:event_AgregarProductosActionPerformed
+    }                                                
 
-    private void QuitarProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitarProductosActionPerformed
+    private void QuitarProductosActionPerformed(java.awt.event.ActionEvent evt) {                                                
         AdminBSP.removeProduct();
-    }//GEN-LAST:event_QuitarProductosActionPerformed
+    }                                               
 
-    private void ventasMensActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ventasMensActionPerformed
+    private void ventasMensActionPerformed(java.awt.event.ActionEvent evt) {                                           
         AdminBSP.generateGraficM();
-    }//GEN-LAST:event_ventasMensActionPerformed
+    }                                          
 
-    private void ventasAnuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ventasAnuActionPerformed
+    private void ventasAnuActionPerformed(java.awt.event.ActionEvent evt) {                                          
         AdminBSP.generateGraficA();
-    }//GEN-LAST:event_ventasAnuActionPerformed
+    }                                         
 
     /**
      * @param args the command line arguments
@@ -370,7 +370,7 @@ public class BuildShopP extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JMenuItem AgregarProductos;
     private javax.swing.JMenuItem QuitarProductos;
     private javax.swing.JButton addOne;
@@ -401,5 +401,5 @@ public class BuildShopP extends javax.swing.JFrame {
     private javax.swing.JMenuItem usersActived;
     private javax.swing.JMenuItem ventasAnu;
     private javax.swing.JMenuItem ventasMens;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
