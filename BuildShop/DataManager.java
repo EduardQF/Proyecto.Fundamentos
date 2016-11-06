@@ -22,6 +22,14 @@ public class DataManager {
 		db_product.add(new Product(id, code, name, cost, price, stock, unit));
 	}
 
+	public static void newUser(String id, String password, String access, String firstname, String lastname, String email) {
+		db_user.add(new User(id, password, access, firstname, lastname, email));
+	}
+	
+	public static void newClient() {
+		db_client.add(new Client());
+	}
+	
 	public static void readUsers() {
 		System.out.println("Reading DB");
 		String temp_db[] = DataReader.readData("C:/BuildShop/DB/users.buildshop");
