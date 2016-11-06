@@ -1,6 +1,8 @@
 
 package builshop;
 
+import javax.swing.JOptionPane;
+
 
 public class EliminarVend extends javax.swing.JFrame {
 /*
@@ -12,7 +14,7 @@ public class EliminarVend extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -42,10 +44,6 @@ public class EliminarVend extends javax.swing.JFrame {
             }
         });
 
-        jMensaje1.setText("jLabel3");
-
-        jMensaje2.setText("jLabel3");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -64,36 +62,60 @@ public class EliminarVend extends javax.swing.JFrame {
                             .addComponent(JEliminar)
                             .addComponent(Jclave))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jMensaje1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap(112, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jMensaje2)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addComponent(jMensaje1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jMensaje2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JRut, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jMensaje1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(JRut, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jMensaje1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Jclave, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jMensaje2))
+                    .addComponent(jMensaje2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(JEliminar)
                 .addContainerGap(43, Short.MAX_VALUE))
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void JEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JEliminarActionPerformed
+    private void JEliminarActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        limpiar();
+        validar();
+        
+    }                                         
+
+    private void JclaveActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        // TODO add your handling code here:
+    }                                      
+
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton JEliminar;
+    private javax.swing.JTextField JRut;
+    private javax.swing.JPasswordField Jclave;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jMensaje1;
+    private javax.swing.JLabel jMensaje2;
+    // End of variables declaration                   
+
+    private void limpiar() {
+        jMensaje1.setText("");
+        jMensaje2.setText("");
+    }
+
+    private void validar() {
         String rut, clave;
         boolean ru=false,cl=false;
         
@@ -110,20 +132,10 @@ public class EliminarVend extends javax.swing.JFrame {
         }else{
             jMensaje2.setText("ingrese solo letras y numeros");
         }
-    }//GEN-LAST:event_JEliminarActionPerformed
-
-    private void JclaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JclaveActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JclaveActionPerformed
-
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JEliminar;
-    private javax.swing.JTextField JRut;
-    private javax.swing.JPasswordField Jclave;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jMensaje1;
-    private javax.swing.JLabel jMensaje2;
-    // End of variables declaration//GEN-END:variables
+        System.out.println("ru:"+ru+"\ncl:"+cl);
+        if(ru&&cl){
+            AgreDelete.deleteProduct();
+            JOptionPane.showMessageDialog(null, "Eliminado");
+        }
+    }
 }
