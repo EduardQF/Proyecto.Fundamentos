@@ -4,9 +4,9 @@ package builshop;
  *
  * @author Cristobal
  */
-public class productDelete extends javax.swing.JFrame {
+public class ProductDelete extends javax.swing.JFrame {
 
-    public productDelete() {
+    public ProductDelete() {
         initComponents();
     }
 
