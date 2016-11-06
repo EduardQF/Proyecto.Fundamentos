@@ -117,16 +117,17 @@ public class LogIn extends JFrame {
 	}
 	
 	private void onLogIn() {
-        String user = txtUsername.getText();
+        	String user = txtUsername.getText();
 		String pass = pwdPassword.getText();
-    	lblWrongUser.setVisible(true);
-        if (DataManager.findUser(user, pass)){
-            DataManager.showLS();
-            dispose();
-        } else {
-            txtUsername.requestFocus();
-        }
-    }
-	
+    		lblWrongUser.setVisible(true);
+       		if (DataManager.findUser(user, pass)){
+			DataManager.showLS();
+            		BuildShopP bsp = new BuildShopP();
+            		dispose();
+            		bsp.setVisible(true);
+        	} else {
+            		txtUsername.requestFocus();
+        	}
+    	}
 
 }
