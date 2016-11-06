@@ -1,4 +1,3 @@
-
 package builshop;
 
 
@@ -13,19 +12,29 @@ public abstract class AgreDelete {
         }else{
             acces="seller";
         }
+        DataManager.newUser(rut, clave, acces, firstname, lastname, email);
+        DataManager.writeUsers();
+        System.out.println("agregado completo");
     }
     
     public static void deleteUser(){
     
     }
     
-    public static void newProduct(){
-    
+    static void newProduct(String producto, String id, String cantidad, String codigo, String precioVenta, String costo, String unit, String descripcion) {
+        int cost=Integer.parseInt(costo);
+        int price=Integer.parseInt(precioVenta);
+        int stoc=Integer.parseInt(cantidad);
+        DataManager.newProduct(id, codigo, producto, cost, price, stoc, unit);
+        DataManager.writeProducts();
+        System.out.println("agregado completo");
     }
     
     public static void deleteProduct(){
     
     }
+
+    
 
     
 }
