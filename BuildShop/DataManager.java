@@ -18,24 +18,6 @@ public class DataManager {
 		ls.setVisible(false);
 	}
 
-	public static void setID(int id) {
-		user_id = id;
-	}
-
-	public static int getID() {
-		return user_id;
-	}
-
-	public static void setAcces(boolean admin, boolean inventory, boolean seller) {
-		user_access[0] = admin;
-		user_access[1] = inventory;
-		user_access[2] = seller;
-	}
-
-	public static boolean getAccess(int i) {
-		return user_access[i];
-	}
-
 	public static void newProduct(String id, String code, String name, int cost, int price, int stock, String unit) {
 		db_product.add(new Product(id, code, name, cost, price, stock, unit));
 	}
@@ -160,4 +142,45 @@ public class DataManager {
 		return false;
 	}
 
+	public static void setID(int id) {
+		user_id = id;
+	}
+
+	public static int getID() {
+		return user_id;
+	}
+
+	public static void setAcces(boolean admin, boolean inventory, boolean seller) {
+		user_access[0] = admin;
+		user_access[1] = inventory;
+		user_access[2] = seller;
+	}
+
+	public static boolean getAccess(int i) {
+		return user_access[i];
+	}
+	
+	public int getUsersSize(){
+		return db_user.size();
+	}
+	
+	public int getProductsSize(){
+		return db_product.size();
+	}
+	
+	public int getClientsSize(){
+		return db_client.size();
+	}
+	
+	public Product getProduct(int i){
+		return db_product.get(i);
+	}
+	
+	public User getUser(int i){
+		return db_user.get(i);
+	}
+	
+	public Client getClient(int i){
+		return db_client.get(i);
+	}
 }
