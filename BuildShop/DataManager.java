@@ -43,51 +43,58 @@ public class DataManager {
 	public static void readUsers() {
 		System.out.println("Reading DB");
 		String temp_db[] = DataReader.readData("C:/BuildShop/DB/users.buildshop");
-		System.out.println("DataBase Size: " + temp_db.length + "\n" + (temp_db.length / 7) + " Users Detected");
-		for (int i = 0; i < temp_db.length; i += 6) {
-			db_user.add(new User(temp_db[i], temp_db[i + 1], temp_db[i + 2], temp_db[i + 3], temp_db[i + 4],
-					temp_db[i + 5]));
-			System.out.println("Reading ID: " + temp_db[i]);
+		if (temp_db.length > 5) {
+			System.out.println("UsersDB Size: " + temp_db.length + "\n" + (temp_db.length / 7) + " Users Detected");
+			for (int i = 0; i < temp_db.length; i += 6) {
+				db_user.add(new User(temp_db[i], temp_db[i + 1], temp_db[i + 2], temp_db[i + 3], temp_db[i + 4],
+						temp_db[i + 5]));
+				System.out.println("Reading ID: " + temp_db[i]);
+			}
 		}
 	}
 
 	public static void readProducts() {
 		System.out.println("Reading Products");
 		String temp_db[] = DataReader.readData("C:/BuildShop/DB/products.buildshop");
-		System.out.println("DataBase Size: " + temp_db.length + "\n" + (temp_db.length / 8) + " Products Detected");
-		for (int i = 0; i < temp_db.length; i += 7) {
-			db_product.add(new Product(temp_db[i], temp_db[i + 1], temp_db[i + 2], Integer.valueOf(temp_db[i + 3]),
-					Integer.valueOf(temp_db[i + 4]), Integer.valueOf(temp_db[i + 5]), temp_db[i + 6]));
-			System.out.println("Reading ID: " + temp_db[i]);
+		if (temp_db.length > 6) {
+			System.out
+					.println("ProductsDB Size: " + temp_db.length + "\n" + (temp_db.length / 8) + " Products Detected");
+			for (int i = 0; i < temp_db.length; i += 7) {
+				db_product.add(new Product(temp_db[i], temp_db[i + 1], temp_db[i + 2], Integer.valueOf(temp_db[i + 3]),
+						Integer.valueOf(temp_db[i + 4]), Integer.valueOf(temp_db[i + 5]), temp_db[i + 6]));
+				System.out.println("Reading ID: " + temp_db[i]);
+			}
 		}
 	}
 
 	public static void readClients() {
 		System.out.println("Reading Clients");
 		String temp_db[] = DataReader.readData("C:/BuildShop/DB/clients.buildshop");
-		System.out.println("DataBase Size: " + temp_db.length + "\n" + (temp_db.length / 1) + " Clients Detected");
-		for (int i = 0; i < temp_db.length; i += 1) {
-			db_client.add(new Client());
-			System.out.println("Reading ID: " + "null");
+		if (temp_db.length > 5) {
+			System.out.println("ClientsDB Size: " + temp_db.length + "\n" + (temp_db.length / 1) + " Clients Detected");
+			for (int i = 0; i < temp_db.length; i += 1) {
+				db_client.add(new Client());
+				System.out.println("Reading ID: " + "null");
+			}
 		}
 	}
-	
+
 	public static void writeUsers() {
 		String data = "";
 		for (int i = 0; i < db_user.size(); i++) {
 			if (i != 0) {
-				data += "¦»»»¦";
+				data += "Â¦Â»Â»Â»Â¦";
 			}
 			data += db_user.get(i).getID();
-			data += "¦»»»¦";
+			data += "Â¦Â»Â»Â»Â¦";
 			data += db_user.get(i).getPassword();
-			data += "¦»»»¦";
+			data += "Â¦Â»Â»Â»Â¦";
 			data += db_user.get(i).getAccess();
-			data += "¦»»»¦";
+			data += "Â¦Â»Â»Â»Â¦";
 			data += db_user.get(i).getFirstName();
-			data += "¦»»»¦";
+			data += "Â¦Â»Â»Â»Â¦";
 			data += db_user.get(i).getLastName();
-			data += "¦»»»¦";
+			data += "Â¦Â»Â»Â»Â¦";
 			data += db_user.get(i).getEmail();
 		}
 		DataReader.writeData("C:/BuildShop/DB/users.buildshop", data);
@@ -97,20 +104,20 @@ public class DataManager {
 		String data = "";
 		for (int i = 0; i < db_product.size(); i++) {
 			if (i != 0) {
-				data += "¦»»»¦";
+				data += "Â¦Â»Â»Â»Â¦";
 			}
 			data += db_product.get(i).getID();
-			data += "¦»»»¦";
+			data += "Â¦Â»Â»Â»Â¦";
 			data += db_product.get(i).getCode();
-			data += "¦»»»¦";
+			data += "Â¦Â»Â»Â»Â¦";
 			data += db_product.get(i).getName();
-			data += "¦»»»¦";
+			data += "Â¦Â»Â»Â»Â¦";
 			data += String.valueOf(db_product.get(i).getCost());
-			data += "¦»»»¦";
+			data += "Â¦Â»Â»Â»Â¦";
 			data += String.valueOf(db_product.get(i).getPrice());
-			data += "¦»»»¦";
+			data += "Â¦Â»Â»Â»Â¦";
 			data += String.valueOf(db_product.get(i).getStock());
-			data += "¦»»»¦";
+			data += "Â¦Â»Â»Â»Â¦";
 			data += db_product.get(i).getUnit();
 		}
 		DataReader.writeData("C:/BuildShop/DB/products.buildshop", data);
@@ -120,7 +127,7 @@ public class DataManager {
 		String data = "";
 		for (int i = 0; i < db_client.size(); i++) {
 			if (i != 0) {
-				data += "¦»»»¦";
+				data += "Â¦Â»Â»Â»Â¦";
 			}
 		}
 		DataReader.writeData("C:/BuildShop/DB/clients.buildshop", data);
